@@ -3,7 +3,7 @@ import UCF from "./UCF";
 
 export default function Education() {
   return (
-    <div className="pt-5 pb-20 bg-[#0E0E0E] rounded-b-[35px]">
+    <div className="pt-5 pb-20 bg-[#0E0E0E] rounded-b-[35px] drop-shadow-2xl">
       <h2 className="text-[#FFFBF5] text-5xl font-black text-center mb-8">
         Education
       </h2>
