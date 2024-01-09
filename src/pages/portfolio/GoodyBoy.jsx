@@ -1,9 +1,9 @@
 export default function GoodyBoy() {
   return (
-    <div className="flex gap-8">
+    <div className="flex md:flex-nowrap flex-wrap gap-8">
       <img
         src="/images/project-covers/goody-boy-cover.png"
-        className="lg:w-[375px] md:w-[300px]"
+        className="lg:w-[375px] md:w-[300px] md:h-fit"
       />
       <div className="flex flex-col text-white gap-8">
         <div>
@@ -46,11 +46,11 @@ export default function GoodyBoy() {
           </div>
         </div>
         <div className="flex gap-8 h-full items-end">
-          <button className="px-4 py-2 w-fit h-fit bg-[#1A1A1A] rounded">
+          <button className="px-4 py-2 w-fit h-fit border b-white rounded hover:bg-white hover:text-[#0E0E0E] duration-200">
             Live Version
           </button>
-          <button className="px-4 py-2 w-fit h-fit bg-[#1A1A1A] rounded">
-            Git Repository Version
+          <button className="px-4 py-2 w-fit h-fit border b-white rounded hover:bg-white hover:text-[#0E0E0E] duration-200">
+            GitHub Repository
           </button>
         </div>
       </div>

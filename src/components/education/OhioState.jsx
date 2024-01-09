@@ -7,3 +7,5 @@ export default function OhioState() {
     </div>
   );
 }
+
+<img src="/images/school-logos/ohio-state-buckeye-leaf.png" />;
