@@ -1,4 +1,14 @@
+import { Link } from "react-router-dom";
+
 export default function Header() {
+  const handleDownloadResume = () => {
+    const resumePath = "/images/Wyatt-Bensman-Resume.pdf";
+    const link = document.createElement("a");
+    link.href = resumePath;
+    link.download = "Wyatt-Bensman-Resume.pdf";
+    link.click();
+  };
+
   return (
     <>
       <img
@@ -13,12 +23,18 @@ export default function Header() {
           approach seeking to apply & enhance digital marketing expertise
         </p>
         <div className="flex justify-center my-10 gap-4">
-          <button className="border-[1.5px] border-white rounded-xl md:px-8 px-6 md:py-4 py-3 md:text-2xl text-xl text-white font-light hover:bg-white hover:text-black duration-200">
+          <button
+            onClick={handleDownloadResume}
+            className="border-[1.5px] border-white rounded-xl md:px-8 px-6 md:py-4 py-3 md:text-2xl text-xl text-white font-light hover:bg-white hover:text-black duration-200"
+          >
             Resume
           </button>
-          <button className="border-[1.5px] border-white rounded-xl md:px-8 px-6 md:py-4 py-3 md:text-2xl text-xl text-white font-light hover:bg-white hover:text-black duration-200">
+          <Link
+            to="/portfolio"
+            className="border-[1.5px] border-white rounded-xl md:px-8 px-6 md:py-4 py-3 md:text-2xl text-xl text-white font-light hover:bg-white hover:text-black duration-200"
+          >
             Portfolio
-          </button>
+          </Link>
         </div>
       </div>
     </>

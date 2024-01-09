@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Form from "./Form";
 
 export default function Contact() {
@@ -12,20 +13,27 @@ export default function Contact() {
         <div className="flex flex-col gap-4 mt-8 text-[#0E0E0E]">
           <div className="flex gap-4 items-center">
             <i className="fa-solid fa-envelope text-3xl"></i>
-            <p className="text-2xl font-light">Wyattbensman5@gmail.com</p>
+            <p className="text-xl font-light">Wyattbensman5@gmail.com</p>
           </div>
           <div className="flex gap-4 items-center">
             <i className="fa-solid fa-phone text-3xl"></i>
-            <p className="text-2xl font-light">937-726-6082</p>
+            <p className="text-xl font-light">937-726-6082</p>
           </div>
           <div className="flex gap-4 items-center">
             <i className="fa-solid fa-location-dot text-3xl"></i>
-            <p className="text-2xl font-light">Tampa, Florida</p>
+            <p className="text-xl font-light">Tampa, Florida</p>
           </div>
         </div>
         <div className="flex gap-4 mt-8">
-          <i className="fa-brands fa-linkedin text-4xl text-[#0E0E0E]"></i>
-          <i className="fa-brands fa-square-github text-4xl text-[#0E0E0E]"></i>
+          <Link
+            to="https://www.linkedin.com/in/wyatt-bensman-22840619b/"
+            target="_blank"
+          >
+            <i className="fa-brands fa-linkedin text-4xl text-[#0E0E0E] hover:text-gray-600 duration-200"></i>
+          </Link>
+          <Link to="https://github.com/WyattBensman" target="_blank">
+            <i className="fa-brands fa-square-github text-4xl text-[#0E0E0E] hover:text-gray-600 duration-200"></i>
+          </Link>
         </div>
       </div>
       <Form />

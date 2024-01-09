@@ -10,7 +10,7 @@ export default function OhioState() {
       <p className="font-light text-sm relative z-10">AUGUST 2019 - MAY 2022</p>
       <div className="absolute inset-0 flex items-center justify-center">
         <img
-          src="/images/school-logos/ohio-state-buckeye-leaf.png"
+          src="/images/ohio-state-buckeye-leaf.png"
           className="w-2/3 h-auto"
           alt="Ohio State University Logo"
         />

@@ -24,6 +24,14 @@ export default function Navbar() {
     };
   }, []);
 
+  const handleDownloadResume = () => {
+    const resumePath = "/images/Wyatt-Bensman-Resume.pdf";
+    const link = document.createElement("a");
+    link.href = resumePath;
+    link.download = "Wyatt-Bensman-Resume.pdf";
+    link.click();
+  };
+
   return (
     <nav
       className={`fixed top-0 z-10 py-4 w-full py-1 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24 ${
@@ -96,27 +104,29 @@ export default function Navbar() {
               </NavLink>
             </li>
             <li className="md:hidden">
-              <NavLink
-                to="/"
+              <button
+                onClick={handleDownloadResume}
                 className={`hover:text-[#34CC98] ease-in-out duration-200 ${
                   location.pathname === "/portfolio" && "text-white"
                 }`}
               >
                 RESUME
-              </NavLink>
+              </button>
             </li>
           </ul>
         </div>
         <ul className="md:block hidden">
           <li>
-            <NavLink
-              to="/"
-              className={`hover:text-[#34CC98] ease-in-out duration-200 ${
-                location.pathname === "/portfolio" && "text-white"
+            <button
+              onClick={handleDownloadResume}
+              className={`border px-4 py-2 rounded-xl ease-in-out duration-200 ${
+                location.pathname === "/portfolio"
+                  ? "text-white border-white hover:bg-white hover:text-black"
+                  : "text-black border-black hover:bg-black  hover:text-white"
               }`}
             >
               RESUME
-            </NavLink>
+            </button>
           </li>
         </ul>
       </div>

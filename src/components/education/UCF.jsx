@@ -12,7 +12,7 @@ export default function UCF() {
       </p>
       <div className="absolute inset-0 flex items-center justify-center">
         <img
-          src="/images/school-logos/ucf-knight.png"
+          src="/images/ucf-knight.png"
           className="w-2/3 h-auto"
           alt="Ohio State University Logo"
         />
