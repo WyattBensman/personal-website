@@ -2,7 +2,7 @@ import Form from "./Form";
 
 export default function Contact() {
   return (
-    <div className="py-20 bg-[#FFFBF5] px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24 md:grid grid-cols-2 gap-8">
+    <div className="py-20 bg-[#FFFBF5] h-full px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24 md:grid grid-cols-2 gap-8">
       <div>
         <h2 className="text-5xl font-black mb-8">Get in touch</h2>
         <p className="text-xl font-light">

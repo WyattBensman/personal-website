@@ -1,6 +1,6 @@
 export default function Form() {
   return (
-    <form className="bg-[#1A1A1A] rounded-xl md:mt-0 mt-12 pt-8 drop-shadow">
+    <form className="bg-[#1A1A1A] h-fit rounded-xl md:mt-0 mt-12 pt-8 drop-shadow">
       <div class="relative z-0 mb-5 group mx-8">
         <input
           type="text"

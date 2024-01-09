@@ -1,18 +1,36 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import "../styles.css";
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY > 50;
+      setIsScrolled(scrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <nav
-      className={`absolute z-10 py-4 w-full py-1 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24 ${
-        isNavOpen ? "bg-white" : ""
-      }`}
+      className={`fixed top-0 z-10 py-4 w-full py-1 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24 ${
+        isNavOpen || isScrolled
+          ? "bg-white transition-all duration-300"
+          : "transition-all duration-300"
+      } ${isNavOpen ? "bg-opacity-100" : "bg-opacity-20"}`}
     >
       {/* Toggler */}
       <button
@@ -50,23 +68,29 @@ export default function Navbar() {
             <li>
               <NavLink
                 to="/"
-                className="hover:text-[#34CC98] ease-in-out duration-200"
+                className={`hover:text-[#34CC98] ease-in-out duration-200 ${
+                  location.pathname === "/portfolio" && "text-white"
+                }`}
               >
                 HOME
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/"
-                className="hover:text-[#34CC98] ease-in-out duration-200"
+                to="/portfolio"
+                className={`hover:text-[#34CC98] ease-in-out duration-200 ${
+                  location.pathname === "/portfolio" && "text-white"
+                }`}
               >
                 PORTFOLIO
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/"
-                className="hover:text-[#34CC98] ease-in-out duration-200"
+                to="/contact"
+                className={`hover:text-[#34CC98] ease-in-out duration-200 ${
+                  location.pathname === "/portfolio" && "text-white"
+                }`}
               >
                 CONTACT
               </NavLink>
@@ -74,7 +98,9 @@ export default function Navbar() {
             <li className="md:hidden">
               <NavLink
                 to="/"
-                className="hover:text-[#34CC98] ease-in-out duration-200"
+                className={`hover:text-[#34CC98] ease-in-out duration-200 ${
+                  location.pathname === "/portfolio" && "text-white"
+                }`}
               >
                 RESUME
               </NavLink>
@@ -85,7 +111,9 @@ export default function Navbar() {
           <li>
             <NavLink
               to="/"
-              className="hover:text-[#34CC98] ease-in-out duration-200"
+              className={`hover:text-[#34CC98] ease-in-out duration-200 ${
+                location.pathname === "/portfolio" && "text-white"
+              }`}
             >
               RESUME
             </NavLink>
