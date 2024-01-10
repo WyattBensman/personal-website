@@ -1,3 +1,6 @@
+import ReactIcon from "./icons/react";
+import TailwindIcon from "./icons/tailwind";
+
 export default function GoodyBoy() {
   return (
     <div className="flex md:flex-nowrap flex-wrap gap-8">
@@ -22,11 +25,8 @@ export default function GoodyBoy() {
         <div>
           <h4 className="text-xl font-bold text-white">Languages Utilized</h4>
           <div className="flex gap-4 text-4xl mt-2">
-            <i className="fa-brands fa-react"></i>
-            <img
-              src="/images/tailwind-css-svgrepo-com.png"
-              className="w-[36px]"
-            />
+            <ReactIcon />
+            <TailwindIcon />
           </div>
         </div>
         <div>

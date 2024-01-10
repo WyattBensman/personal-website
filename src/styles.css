@@ -5,3 +5,12 @@ body {
 .active {
   color: #34cc98;
 }
+
+.custom-popover {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.custom-popover.active {
+  opacity: 1;
+}

@@ -1,3 +1,9 @@
+import ExpressIcon from "./icons/express";
+import MongoIcon from "./icons/mongo";
+import NodeIcon from "./icons/node";
+import ReactIcon from "./icons/react";
+import TailwindIcon from "./icons/tailwind";
+
 export default function TheMerryWishlsit() {
   return (
     <div className="flex md:flex-nowrap flex-wrap gap-8">
@@ -16,14 +22,11 @@ export default function TheMerryWishlsit() {
         <div>
           <h4 className="text-xl font-bold text-white">Languages Utilized</h4>
           <div className="flex gap-4 text-4xl mt-2">
-            <img src="/images/mongodb-svgrepo-com.png" className="w-[36px]" />
-            <i className="fa-brands fa-square-js"></i>
-            <i className="fa-brands fa-react"></i>
-            <i className="fa-brands fa-node"></i>
-            <img
-              src="/images/tailwind-css-svgrepo-com.png"
-              className="w-[36px]"
-            />
+            <MongoIcon />
+            <ExpressIcon />
+            <ReactIcon />
+            <NodeIcon />
+            <TailwindIcon />
           </div>
         </div>
         <div>
