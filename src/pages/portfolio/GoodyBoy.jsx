@@ -11,21 +11,18 @@ export default function GoodyBoy() {
             Goody Boy Diner Website Redesign
           </h3>
           <p className="text-lg font-light">
-            Lorem asdf adf adsf adsf aadf adf adf adf akdjf alkjsdf;lk jasd;lfkj
-            a;dlskfj a;lkdsjf;l akdjsf;lk ajsd;lfkj asd;lkfj Lorem asdf adf adsf
-            adsf aadf adf adf adf akdjf alkjsdf;lk jasd;lfkj a;dlskfj a;lkdsjf;l
-            akdjsf;lk ajsd;lfkj asd;lkfj Lorem asdf adf adsf adsf aadf adf adf
-            adf akdjf alkjsdf;lk jasd;lfkj a;dlskfj a;lkdsjf;l akdjsf;lk
-            ajsd;lfkj asd;lkfj{" "}
+            Independently developed the redesign for the Goody Boy Diner
+            website, infusing a vintage and retro aesthetic to enhance the
+            online representation of this esteemed establishment. Emphasizing a
+            polished and contemporary design approach, the project aims to
+            elevate the overall user experience and visual appeal of the
+            website.
           </p>
         </div>
         <div>
           <h4 className="text-xl font-bold text-white">Languages Utilized</h4>
           <div className="flex gap-4 text-4xl mt-2">
-            <img src="/images/mongodb-svgrepo-com.png" className="w-[36px]" />
-            <i className="fa-brands fa-square-js"></i>
             <i className="fa-brands fa-react"></i>
-            <i className="fa-brands fa-node"></i>
             <img
               src="/images/tailwind-css-svgrepo-com.png"
               className="w-[36px]"

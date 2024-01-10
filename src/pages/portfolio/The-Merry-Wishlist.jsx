@@ -5,12 +5,12 @@ export default function TheMerryWishlsit() {
         <div>
           <h3 className="text-2xl font-bold">The Merry Wishlist</h3>
           <p className="text-lg font-light">
-            Lorem asdf adf adsf adsf aadf adf adf adf akdjf alkjsdf;lk jasd;lfkj
-            a;dlskfj a;lkdsjf;l akdjsf;lk ajsd;lfkj asd;lkfj Lorem asdf adf adsf
-            adsf aadf adf adf adf akdjf alkjsdf;lk jasd;lfkj a;dlskfj a;lkdsjf;l
-            akdjsf;lk ajsd;lfkj asd;lkfj Lorem asdf adf adsf adsf aadf adf adf
-            adf akdjf alkjsdf;lk jasd;lfkj a;dlskfj a;lkdsjf;l akdjsf;lk
-            ajsd;lfkj asd;lkfj{" "}
+            A web application designed to streamline the holiday wishlist
+            experience. This platform enables users to effortlessly compile and
+            share desired items from various sites on a single page. Leveraging
+            extensive CRUD operations, I ensured a robust and user-friendly
+            application, simplifying the process of creating and managing
+            festive wishlists.
           </p>
         </div>
         <div>
@@ -28,15 +28,12 @@ export default function TheMerryWishlsit() {
         </div>
         <div>
           <h4 className="text-xl font-bold text-white">Notable Integrations</h4>
-          <div className="flex gap-4 text-4xl mt-2">
-            <p className="text-lg font-light">
-              Lorem asdf adf adsf adsf aadf adf adf adf akdjf alkjsdf;lk
-              jasd;lfkj a;dlskfj a;lkdsjf;l akdjsf;lk ajsd;lfkj asd;lkfj Lorem
-              asdf adf adsf adsf aadf adf adf adf akdjf alkjsdf;lk jasd;lfkj
-              a;dlskfj a;lkdsjf;l akdjsf;lk ajsd;lfkj asd;lkfj Lorem asdf adf
-              adsf adsf aadf adf adf adf akdjf alkjsdf;lk jasd;lfkj a;dlskfj
-              a;lkdsjf;l akdjsf;lk ajsd;lfkj asd;lkfj{" "}
-            </p>
+          <div className="flex gap-4 mt-2">
+            <ul className="text-lg font-light">
+              <li>Login/signup functionality</li>
+              <li>Create, update & delete list and items</li>
+              <li>Save/unsave functionality</li>
+            </ul>
           </div>
         </div>
         <div className="flex gap-8 h-full items-end">

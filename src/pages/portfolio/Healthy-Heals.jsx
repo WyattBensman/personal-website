@@ -9,12 +9,11 @@ export default function HealthyHeals() {
         <div>
           <h3 className="text-2xl font-bold">Healthy Heals</h3>
           <p className="text-lg font-light">
-            Lorem asdf adf adsf adsf aadf adf adf adf akdjf alkjsdf;lk jasd;lfkj
-            a;dlskfj a;lkdsjf;l akdjsf;lk ajsd;lfkj asd;lkfj Lorem asdf adf adsf
-            adsf aadf adf adf adf akdjf alkjsdf;lk jasd;lfkj a;dlskfj a;lkdsjf;l
-            akdjsf;lk ajsd;lfkj asd;lkfj Lorem asdf adf adsf adsf aadf adf adf
-            adf akdjf alkjsdf;lk jasd;lfkj a;dlskfj a;lkdsjf;l akdjsf;lk
-            ajsd;lfkj asd;lkfj{" "}
+            A platform empowering users to discover, create, and save their
+            favorite nutritious dishes on their journey to a healthier
+            lifestyle. This versatile platform offers a seamless experience for
+            individuals seeking to enhance their well-being through a curated
+            collection of wholesome recipes.
           </p>
         </div>
         <div>
@@ -32,15 +31,16 @@ export default function HealthyHeals() {
         </div>
         <div>
           <h4 className="text-xl font-bold text-white">Notable Integrations</h4>
-          <div className="flex gap-4 text-4xl mt-2">
-            <p className="text-lg font-light">
-              Lorem asdf adf adsf adsf aadf adf adf adf akdjf alkjsdf;lk
-              jasd;lfkj a;dlskfj a;lkdsjf;l akdjsf;lk ajsd;lfkj asd;lkfj Lorem
-              asdf adf adsf adsf aadf adf adf adf akdjf alkjsdf;lk jasd;lfkj
-              a;dlskfj a;lkdsjf;l akdjsf;lk ajsd;lfkj asd;lkfj Lorem asdf adf
-              adsf adsf aadf adf adf adf akdjf alkjsdf;lk jasd;lfkj a;dlskfj
-              a;lkdsjf;l akdjsf;lk ajsd;lfkj asd;lkfj{" "}
-            </p>
+          <div className="flex gap-4 mt-2">
+            <ul className="text-lg font-light">
+              <li>Login/signup functionality</li>
+              <li>Create, update & delete dishes</li>
+              <li>Save/unsave dishes to profile</li>
+              <li>Image uploading for dishes</li>
+              <li>
+                Sort dishes by category or creation date for easy navigation
+              </li>
+            </ul>
           </div>
         </div>
         <div className="flex gap-8 h-full items-end">
