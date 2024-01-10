@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { useMedia } from "use-media";
 import "../styles.css";
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+
+  const isMediumScreen = useMedia({ minWidth: "768px" });
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -24,6 +27,12 @@ export default function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    if (isMediumScreen && isNavOpen) {
+      setIsNavOpen(false);
+    }
+  }, [isMediumScreen, isNavOpen]);
+
   const handleDownloadResume = () => {
     const resumePath = "/images/Wyatt-Bensman-Resume.pdf";
     const link = document.createElement("a");
@@ -41,30 +50,32 @@ export default function Navbar() {
       } ${isNavOpen ? "bg-opacity-100" : "bg-opacity-20"}`}
     >
       {/* Toggler */}
-      <button
-        type="button"
-        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm bg-white text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-        aria-controls="navbar-default"
-        aria-expanded={isNavOpen}
-        onClick={toggleNav}
-      >
-        <span className="sr-only">Open main menu</span>
-        <svg
-          className="w-5 h-5"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 17 14"
+      <div className="flex justify-end">
+        <button
+          type="button"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm bg-white text-gray-500 rounded-lg md:hidden ml-auto hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          aria-controls="navbar-default"
+          aria-expanded={isNavOpen}
+          onClick={toggleNav}
         >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M1 1h15M1 7h15M1 13h15"
-          />
-        </svg>
-      </button>
+          <span className="sr-only">Open main menu</span>
+          <svg
+            className="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+      </div>
       <div className="flex items-center justify-between text-lg font-light">
         <div
           className={`w-full md:block md:w-auto ${
@@ -77,7 +88,9 @@ export default function Navbar() {
               <NavLink
                 to="/"
                 className={`hover:text-[#34CC98] ease-in-out duration-200 ${
-                  location.pathname === "/portfolio" && "text-white"
+                  location.pathname === "/portfolio" && !isNavOpen
+                    ? "text-white"
+                    : "text-black"
                 }`}
               >
                 HOME
@@ -87,7 +100,9 @@ export default function Navbar() {
               <NavLink
                 to="/portfolio"
                 className={`hover:text-[#34CC98] ease-in-out duration-200 ${
-                  location.pathname === "/portfolio" && "text-white"
+                  location.pathname === "/portfolio" && !isNavOpen
+                    ? "text-white"
+                    : "text-black"
                 }`}
               >
                 PORTFOLIO
@@ -97,7 +112,9 @@ export default function Navbar() {
               <NavLink
                 to="/contact"
                 className={`hover:text-[#34CC98] ease-in-out duration-200 ${
-                  location.pathname === "/portfolio" && "text-white"
+                  location.pathname === "/portfolio" && !isNavOpen
+                    ? "text-white"
+                    : "text-black"
                 }`}
               >
                 CONTACT
@@ -107,7 +124,9 @@ export default function Navbar() {
               <button
                 onClick={handleDownloadResume}
                 className={`hover:text-[#34CC98] ease-in-out duration-200 ${
-                  location.pathname === "/portfolio" && "text-white"
+                  location.pathname === "/portfolio" && !isNavOpen
+                    ? "text-white"
+                    : "text-black"
                 }`}
               >
                 RESUME
