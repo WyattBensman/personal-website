@@ -4,20 +4,41 @@ import ExpressIcon from "./icons/express";
 import ReactIcon from "./icons/react";
 import NodeIcon from "./icons/node";
 import TailwindIcon from "./icons/tailwind";
+import { useEffect, useState } from "react";
 
 export default function LifeList() {
+  const initialText =
+    "A self-inspired, designed & created website for a mobile application called LifeList. From the website design to the mock-ups & concepts, every element has been crafted myself. This all-encompassing website endures a seamless design that not only highlights the innovative features and user experience offered by the app but also provides users with the opportunity to sign up for early access.";
+
+  const [expanded, setExpanded] = useState(false);
+  const truncatedText = expanded ? initialText : `${initialText.slice(0, 150)}`;
+
+  useEffect(() => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 768) {
+      setExpanded(true);
+    }
+  }, []);
+
+  const toggleExpand = () => {
+    setExpanded(!expanded);
+  };
+
   return (
     <div className="flex md:flex-nowrap flex-wrap gap-8">
       <div className="flex flex-col text-white gap-8 md:order-1 order-2">
         <div>
           <h3 className="text-2xl font-bold">LifeList</h3>
           <p className="text-lg font-light">
-            A self-inspired, designed & created website for a mobile application
-            called LifeList. From the website design to the mock-ups & concepts,
-            every element has been crafted myself. This all-encompassing website
-            endures a seamless design that not only highlights the innovative
-            features and user experience offered by the app but also provides
-            users with the opportunity to sign up for early access.
+            {truncatedText}
+            {!expanded && (
+              <button
+                className="text-blue-500 hover:underline cursor-pointer ps-2"
+                onClick={toggleExpand}
+              >
+                Read more
+              </button>
+            )}
           </p>
         </div>
         <div>

@@ -1,8 +1,26 @@
 import { Link } from "react-router-dom";
 import ReactIcon from "./icons/react";
 import TailwindIcon from "./icons/tailwind";
+import { useEffect, useState } from "react";
 
 export default function GoodyBoy() {
+  const initialText =
+    "A design focused project, drawing inspiration from the vibrant culinary scene of the Goody Boy Diner in Columbus, Ohio. I infused a captivating vintage and retro aesthetic that not only elevates the brand’s online presence, but also ensures a distinctive and memorable experiences for visitors, echoing the charm of the diner itself!";
+
+  const [expanded, setExpanded] = useState(false);
+  const truncatedText = expanded ? initialText : `${initialText.slice(0, 150)}`;
+
+  useEffect(() => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 768) {
+      setExpanded(true);
+    }
+  }, []);
+
+  const toggleExpand = () => {
+    setExpanded(!expanded);
+  };
+
   return (
     <div className="flex md:flex-nowrap flex-wrap gap-8">
       <img
@@ -15,12 +33,15 @@ export default function GoodyBoy() {
             Goody Boy Diner Website Redesign
           </h3>
           <p className="text-lg font-light">
-            A design focused project, drawing inspiration from the vibrant
-            culinary scene of the Goody Boy Diner in Columbus, Ohio. I infused a
-            captivating vintage and retro aesthetic that not only elevates the
-            brand’s online presence, but also ensures a distinctive and
-            memorable experiences for visitors, echoing the charm of the diner
-            itself!
+            {truncatedText}
+            {!expanded && (
+              <button
+                className="text-blue-500 hover:underline cursor-pointer ps-2"
+                onClick={toggleExpand}
+              >
+                Read more
+              </button>
+            )}
           </p>
         </div>
         <div>

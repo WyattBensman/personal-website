@@ -4,20 +4,41 @@ import MongoIcon from "./icons/mongo";
 import NodeIcon from "./icons/node";
 import ReactIcon from "./icons/react";
 import TailwindIcon from "./icons/tailwind";
+import { useEffect, useState } from "react";
 
 export default function TheMerryWishlsit() {
+  const initialText =
+    "A web application designed to streamline the holiday wishlist experience. A platform that enables users to effortlessly compile and share desired items from various sites onto a single page. Leveraging extensive CRUD operations, I ensured a robust and user-friendly application, simplifying the process of creating and managing festive wishlists.";
+
+  const [expanded, setExpanded] = useState(false);
+  const truncatedText = expanded ? initialText : `${initialText.slice(0, 150)}`;
+
+  useEffect(() => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 768) {
+      setExpanded(true);
+    }
+  }, []);
+
+  const toggleExpand = () => {
+    setExpanded(!expanded);
+  };
+
   return (
     <div className="flex md:flex-nowrap flex-wrap gap-8">
       <div className="flex flex-col text-white gap-8 md:order-1 order-2">
         <div>
           <h3 className="text-2xl font-bold">The Merry Wishlist</h3>
           <p className="text-lg font-light">
-            A web application designed to streamline the holiday wishlist
-            experience. A platform that enables users to effortlessly compile
-            and share desired items from various sites onto a single page.
-            Leveraging extensive CRUD operations, I ensured a robust and
-            user-friendly application, simplifying the process of creating and
-            managing festive wishlists.
+            {truncatedText}
+            {!expanded && (
+              <button
+                className="text-blue-500 hover:underline cursor-pointer ps-2"
+                onClick={toggleExpand}
+              >
+                Read more
+              </button>
+            )}
           </p>
         </div>
         <div>

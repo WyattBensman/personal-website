@@ -4,8 +4,26 @@ import MongoIcon from "./icons/mongo";
 import NodeIcon from "./icons/node";
 import ReactIcon from "./icons/react";
 import TailwindIcon from "./icons/tailwind";
+import { useEffect, useState } from "react";
 
 export default function HealthyHeals() {
+  const initialText =
+    "A platform empowering users to discover, create, and save their favorite nutritious dishes on their journey to a healthier lifestyle. This versatile platform offers a seamless experience for individuals seeking to enhance their well-being through a curated collection of wholesome recipes.";
+
+  const [expanded, setExpanded] = useState(false);
+  const truncatedText = expanded ? initialText : `${initialText.slice(0, 150)}`;
+
+  useEffect(() => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 768) {
+      setExpanded(true);
+    }
+  }, []);
+
+  const toggleExpand = () => {
+    setExpanded(!expanded);
+  };
+
   return (
     <div className="flex md:flex-nowrap flex-wrap gap-8">
       <img
@@ -16,11 +34,15 @@ export default function HealthyHeals() {
         <div>
           <h3 className="text-2xl font-bold">Healthy Heals</h3>
           <p className="text-lg font-light">
-            A platform empowering users to discover, create, and save their
-            favorite nutritious dishes on their journey to a healthier
-            lifestyle. This versatile platform offers a seamless experience for
-            individuals seeking to enhance their well-being through a curated
-            collection of wholesome recipes.
+            {truncatedText}
+            {!expanded && (
+              <button
+                className="text-blue-500 hover:underline cursor-pointer ps-2"
+                onClick={toggleExpand}
+              >
+                Read more
+              </button>
+            )}
           </p>
         </div>
         <div>
