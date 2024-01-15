@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ExpressIcon from "./icons/express";
 import MongoIcon from "./icons/mongo";
 import NodeIcon from "./icons/node";
@@ -12,11 +13,11 @@ export default function TheMerryWishlsit() {
           <h3 className="text-2xl font-bold">The Merry Wishlist</h3>
           <p className="text-lg font-light">
             A web application designed to streamline the holiday wishlist
-            experience. This platform enables users to effortlessly compile and
-            share desired items from various sites on a single page. Leveraging
-            extensive CRUD operations, I ensured a robust and user-friendly
-            application, simplifying the process of creating and managing
-            festive wishlists.
+            experience. A platform that enables users to effortlessly compile
+            and share desired items from various sites onto a single page.
+            Leveraging extensive CRUD operations, I ensured a robust and
+            user-friendly application, simplifying the process of creating and
+            managing festive wishlists.
           </p>
         </div>
         <div>
@@ -40,12 +41,20 @@ export default function TheMerryWishlsit() {
           </div>
         </div>
         <div className="flex gap-8 h-full items-end">
-          <button className="px-4 py-2 w-fit h-fit border b-white rounded hover:bg-white hover:text-[#0E0E0E] duration-200">
+          <Link
+            to="https://the-merry-wishlist-5138b687280d.herokuapp.com/login"
+            target="_blank"
+            className="px-4 py-2 w-fit h-fit border b-white rounded hover:bg-white hover:text-[#0E0E0E] duration-200"
+          >
             Live Version
-          </button>
-          <button className="px-4 py-2 w-fit h-fit border b-white rounded hover:bg-white hover:text-[#0E0E0E] duration-200">
+          </Link>
+          <Link
+            to="https://github.com/WyattBensman/the-merry-wishlist"
+            target="_blank"
+            className="px-4 py-2 w-fit h-fit border b-white rounded hover:bg-white hover:text-[#0E0E0E] duration-200"
+          >
             GitHub Repository
-          </button>
+          </Link>
         </div>
       </div>
       <img

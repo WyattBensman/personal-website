@@ -14,6 +14,10 @@ export default function Navbar() {
     setIsNavOpen(!isNavOpen);
   };
 
+  const closeNav = () => {
+    setIsNavOpen(false);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY > 50;
@@ -45,7 +49,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 z-10 py-4 w-full py-1 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24 ${
         isNavOpen || isScrolled
-          ? "bg-white transition-all duration-300"
+          ? "bg-white backdrop-blur-md bg-opacity-15 transition-all duration-300"
           : "transition-all duration-300"
       } ${isNavOpen ? "bg-opacity-100" : "bg-opacity-20"}`}
     >
@@ -87,6 +91,7 @@ export default function Navbar() {
             <li>
               <NavLink
                 to="/"
+                onClick={closeNav}
                 className={`hover:text-[#34CC98] ease-in-out duration-200 ${
                   location.pathname === "/portfolio" && !isNavOpen
                     ? "text-white"
@@ -99,6 +104,7 @@ export default function Navbar() {
             <li>
               <NavLink
                 to="/portfolio"
+                onClick={closeNav}
                 className={`hover:text-[#34CC98] ease-in-out duration-200 ${
                   location.pathname === "/portfolio" && !isNavOpen
                     ? "text-white"
@@ -111,6 +117,7 @@ export default function Navbar() {
             <li>
               <NavLink
                 to="/contact"
+                onClick={closeNav}
                 className={`hover:text-[#34CC98] ease-in-out duration-200 ${
                   location.pathname === "/portfolio" && !isNavOpen
                     ? "text-white"

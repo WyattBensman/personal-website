@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function TheMerryWishlist() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div
+    <Link
+      id="theMerryWishlist"
+      to="/portfolio#theMerryWishlist"
       className="relative cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -19,6 +22,6 @@ export default function TheMerryWishlist() {
       <h1 className="absolute bottom-0 left-0 text-lg font-light text-white pl-2 pb-1 hover:text-gray-300 duration-200">
         The Merry Wishlist
       </h1>
-    </div>
+    </Link>
   );
 }

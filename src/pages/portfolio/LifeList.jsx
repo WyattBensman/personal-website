@@ -12,11 +12,12 @@ export default function LifeList() {
         <div>
           <h3 className="text-2xl font-bold">LifeList</h3>
           <p className="text-lg font-light">
-            I designed and developed the entire website for the LifeList mobile
-            application, starting from initial mockups to the implementation of
-            early access sign-up forms. This comprehensive approach ensures a
-            seamless online presence that aligns with the innovative features
-            and user experience offered by the app.
+            A self-inspired, designed & created website for a mobile application
+            called LifeList. From the website design to the mock-ups & concepts,
+            every element has been crafted myself. This all-encompassing website
+            endures a seamless design that not only highlights the innovative
+            features and user experience offered by the app but also provides
+            users with the opportunity to sign up for early access.
           </p>
         </div>
         <div>
@@ -33,21 +34,23 @@ export default function LifeList() {
           <h4 className="text-xl font-bold text-white">Notable Integrations</h4>
           <div className="flex gap-4 text-4xl mt-2">
             <ul className="text-lg font-light">
-              <li>Created all mockups & designs</li>
-              <li>Early Access sign up capabilities</li>
-              <li>Confirmation email sent upon sign up</li>
+              <li>Created All Mockups & Designs</li>
+              <li>Early Access Sign Up Capabilities</li>
+              <li>Email Confirmation Sent Upon Sign Up</li>
             </ul>
           </div>
         </div>
         <div className="flex gap-8 h-full items-end">
           <Link
             to="https://joinlifelist-c2a400d99ff8.herokuapp.com/"
+            target="_blank"
             className="px-4 py-2 w-fit h-fit border b-white rounded hover:bg-white hover:text-[#0E0E0E] duration-200"
           >
             Live Version
           </Link>
           <Link
             to="https://github.com/WyattBensman/lifelist"
+            target="_blank"
             className="px-4 py-2 w-fit h-fit border b-white rounded hover:bg-white hover:text-[#0E0E0E] duration-200"
           >
             GitHub Repository

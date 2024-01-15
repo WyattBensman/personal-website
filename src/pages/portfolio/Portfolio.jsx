@@ -7,7 +7,27 @@ import { useEffect } from "react";
 
 export default function Portfolio() {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    const scrollToTop = () => {
+      window.scrollTo(0, 0);
+    };
+
+    const scrollToSection = (sectionId) => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const scrollOffset = 100;
+
+        const elementPosition = element.offsetTop - scrollOffset;
+        window.scrollTo({ top: elementPosition, behavior: "smooth" });
+      }
+    };
+
+    const hash = window.location.hash;
+    if (hash) {
+      const sectionId = hash.substring(1);
+      scrollToSection(sectionId);
+    } else {
+      scrollToTop();
+    }
   }, []);
 
   return (
@@ -33,6 +53,7 @@ export default function Portfolio() {
           {({ inView, ref }) => (
             <div
               ref={ref}
+              id="goodyBoy"
               className={`${
                 inView
                   ? "opacity-100 translate-y-0 transition-opacity duration-[1750ms] ease-in-out"
@@ -46,6 +67,7 @@ export default function Portfolio() {
         <InView triggerOnce>
           {({ inView, ref }) => (
             <div
+              id="lifelist"
               ref={ref}
               className={`${
                 inView
@@ -61,6 +83,7 @@ export default function Portfolio() {
           {({ inView, ref }) => (
             <div
               ref={ref}
+              id="healthyHeals"
               className={`${
                 inView
                   ? "opacity-100 translate-y-0 transition-opacity duration-[1750ms] ease-in-out"
@@ -75,6 +98,7 @@ export default function Portfolio() {
           {({ inView, ref }) => (
             <div
               ref={ref}
+              id="theMerryWishlist"
               className={`${
                 inView
                   ? "opacity-100 translate-y-0 transition-opacity duration-[1750ms] ease-in-out"

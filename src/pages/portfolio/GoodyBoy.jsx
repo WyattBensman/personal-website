@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ReactIcon from "./icons/react";
 import TailwindIcon from "./icons/tailwind";
 
@@ -14,12 +15,12 @@ export default function GoodyBoy() {
             Goody Boy Diner Website Redesign
           </h3>
           <p className="text-lg font-light">
-            Independently developed the redesign for the Goody Boy Diner
-            website, infusing a vintage and retro aesthetic to enhance the
-            online representation of this esteemed establishment. Emphasizing a
-            polished and contemporary design approach, the project aims to
-            elevate the overall user experience and visual appeal of the
-            website.
+            A design focused project, drawing inspiration from the vibrant
+            culinary scene of the Goody Boy Diner in Columbus, Ohio. I infused a
+            captivating vintage and retro aesthetic that not only elevates the
+            brand’s online presence, but also ensures a distinctive and
+            memorable experiences for visitors, echoing the charm of the diner
+            itself!
           </p>
         </div>
         <div>
@@ -32,23 +33,26 @@ export default function GoodyBoy() {
         <div>
           <h4 className="text-xl font-bold text-white">Notable Integrations</h4>
           <div className="flex gap-4 text-4xl mt-2">
-            <p className="text-lg font-light">
-              Lorem asdf adf adsf adsf aadf adf adf adf akdjf alkjsdf;lk
-              jasd;lfkj a;dlskfj a;lkdsjf;l akdjsf;lk ajsd;lfkj asd;lkfj Lorem
-              asdf adf adsf adsf aadf adf adf adf akdjf alkjsdf;lk jasd;lfkj
-              a;dlskfj a;lkdsjf;l akdjsf;lk ajsd;lfkj asd;lkfj Lorem asdf adf
-              adsf adsf aadf adf adf adf akdjf alkjsdf;lk jasd;lfkj a;dlskfj
-              a;lkdsjf;l akdjsf;lk ajsd;lfkj asd;lkfj{" "}
-            </p>
+            <ul className="text-lg font-light">
+              <li>Fully Web Responsive Design</li>
+            </ul>
           </div>
         </div>
         <div className="flex gap-8 h-full items-end">
-          <button className="px-4 py-2 w-fit h-fit border b-white rounded hover:bg-white hover:text-[#0E0E0E] duration-200">
+          <Link
+            to="https://goody-boy-diner-website-redesign.netlify.app/"
+            target="_blank"
+            className="px-4 py-2 w-fit h-fit border b-white rounded hover:bg-white hover:text-[#0E0E0E] duration-200"
+          >
             Live Version
-          </button>
-          <button className="px-4 py-2 w-fit h-fit border b-white rounded hover:bg-white hover:text-[#0E0E0E] duration-200">
+          </Link>
+          <Link
+            to="https://github.com/WyattBensman/goody-boy-react"
+            target="_blank"
+            className="px-4 py-2 w-fit h-fit border b-white rounded hover:bg-white hover:text-[#0E0E0E] duration-200"
+          >
             GitHub Repository
-          </button>
+          </Link>
         </div>
       </div>
     </div>
